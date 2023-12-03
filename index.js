@@ -1,9 +1,9 @@
 import express from 'express';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 import axios from 'axios';
 
 
-const PORT = process.env.NODE_PORT || 4444;
+// const PORT = process.env.NODE_PORT || 4444;
 
 
 const app = express();
@@ -28,5 +28,9 @@ app.get('/', async (req, res)=>{
     res.sendStatus(500)
   }
 })
+app.get('/test', async (req, res)=>{
 
-app.listen(PORT, ()=>console.log(`Lisen port ${PORT}`))
+  res.send('test work')
+})
+module.exports = app;
+// app.listen(PORT, ()=>console.log(`Lisen port ${PORT}`))
