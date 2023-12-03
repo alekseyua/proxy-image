@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const app = express();
 
-app.get('/', async (req, res)=>{
+app.get('/api', async (req, res)=>{
   try {
     const url_image = req?.query?.url_image;
     if (url_image){
@@ -28,7 +28,8 @@ app.get('/', async (req, res)=>{
     res.sendStatus(500)
   }
 })
-app.get('/test', async (req, res)=>{
+
+app.get('/api/test', async (req, res)=>{
 
   res.send('test work')
 })
