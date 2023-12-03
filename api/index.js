@@ -1,6 +1,6 @@
 import express from 'express';
-// import dotenv from 'dotenv';
 import axios from 'axios';
+// import dotenv from 'dotenv';
 
 
 // const PORT = process.env.NODE_PORT || 4444;
@@ -33,5 +33,5 @@ app.get('/api/test', async (req, res)=>{
 
   res.send('test work')
 })
-module.exports = app;
+export default app;
 // app.listen(PORT, ()=>console.log(`Lisen port ${PORT}`))
