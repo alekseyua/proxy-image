@@ -19,7 +19,7 @@ app.get('/api', async (req, res)=>{
       })
       const b64 = Buffer.from(await responseAxios.data, 'binary').toString('base64');
       const mimeType = `image/${url_image.split('.').pop()}`      
-      res.status(200).send(`<img src="data:${mimeType};base64,${b64}" />`);
+      res.status(200).send(`data:${mimeType};base64,${b64}`);
     }else{
       res.send('Something occurred wrong !!!')
     }
